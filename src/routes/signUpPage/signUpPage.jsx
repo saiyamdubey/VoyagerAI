@@ -1,4 +1,4 @@
-import { SignUp } from "@clerk/clerk-react";
+// import { SignUp } from "@clerk/clerk-react";
 import "./signUpPage.css";
 
 const SignUpPage = () => {
