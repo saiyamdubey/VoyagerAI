@@ -38,7 +38,7 @@ const DashboardPage = () => {
 
       // Save to backend
       try {
-        await fetch("http://localhost:3000/api/chats", {
+        await fetch("https://voyager-backend-18hu.onrender.com/api/chats", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
