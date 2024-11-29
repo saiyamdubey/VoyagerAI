@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./rootLayout.css";
 import { ClerkProvider, SignedIn, UserButton } from "@clerk/clerk-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-const PUBLISHABLE_KEY = "pk_test_bG92ZWQta2l0LTY4LmNsZXJrLmFjY291bnRzLmRldiQ";
+// const PUBLISHABLE_KEY = "pk_test_bGliZXJhbC1yYWJiaXQtMTUuY2xlcmsuYWNjb3VudHMuZGV2JA";
 
 
 
@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 const RootLayout = () => {
      return (
-          <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+          <ClerkProvider publishableKey={"pk_test_bGliZXJhbC1yYWJiaXQtMTUuY2xlcmsuYWNjb3VudHMuZGV2JA"} afterSignOutUrl="/">
                <QueryClientProvider client={queryClient}>
                     <div className="rootLayout">
                          <header>
@@ -45,7 +45,7 @@ const RootLayout = () => {
 
                               <div className="user">
                                    <SignedIn>
-                                        <UserButton />
+                                        <UserButton afterSwitchSessionUrl="/"/>
                                    </SignedIn>
                               </div>
                          </header>
@@ -54,7 +54,7 @@ const RootLayout = () => {
                          </main>
                     </div>
                </QueryClientProvider>
-          </ClerkProvider>
+          // </ClerkProvider>
      );
 };
 

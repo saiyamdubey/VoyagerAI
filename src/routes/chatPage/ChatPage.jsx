@@ -12,7 +12,7 @@ const ChatPage = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ["chat", chatId],
     queryFn: () =>
-      fetch(`https://voyager-backend-18hu.onrender.com/api/chats/${chatId}`, {
+      fetch(`http://localhost:3000/api/chats/${chatId}`, {
         credentials: "include",
       }).then((res) => res.json()),
   });
@@ -31,7 +31,7 @@ const ChatPage = () => {
                 <>
                   {message.img && (
                     <IKImage
-                      urlEndpoint={import.meta.env.VITE_IMAGE_KIT_ENDPOINT}
+                      urlEndpoint={"https://ik.imagekit.io/mocxk9isi"}
                       path={message.img}
                       height="300"
                       width="400"

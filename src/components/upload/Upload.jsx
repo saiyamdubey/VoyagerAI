@@ -1,12 +1,12 @@
 import { IKContext, IKImage, IKUpload } from "imagekitio-react";
 import { useRef } from "react";
 
-const urlEndpoint = import.meta.env.VITE_IMAGE_KIT_ENDPOINT;
-const publicKey = import.meta.env.VITE_IMAGE_KIT_PUBLIC_KEY;
+const urlEndpoint = "https://ik.imagekit.io/mocxk9isi";
+const publicKey = "public_NhnzFbI70p/tOum0jQfYY/k1PIo=";
 
 const authenticator = async () => {
   try {
-    const response = await fetch("https://voyager-backend-18hu.onrender.com/api/upload");
+    const response = await fetch("http://localhost:3000/api/upload");
 
     if (!response.ok) {
       const errorText = await response.text();

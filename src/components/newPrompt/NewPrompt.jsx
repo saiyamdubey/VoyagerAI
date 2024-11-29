@@ -120,7 +120,7 @@ const NewPrompt = ({ data }) => {
       {img.isLoading && <div className="">Loading...</div>}
       {img.dbData?.filePath && (
         <IKImage
-          urlEndpoint={import.meta.env.VITE_IMAGE_KIT_ENDPOINT}
+          urlEndpoint={"https://ik.imagekit.io/mocxk9isi"}
           path={img.dbData?.filePath}
           width="380"
           transformation={[{ width: 380 }]}

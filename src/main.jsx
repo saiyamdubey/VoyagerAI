@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Homepage from "./routes/homepage/Homepage";
+import Homepage from '../src/routes/homepage/Homepage';
 import DashboardPage from "./routes/dashboardPage/DashboardPage";
 import ChatPage from "./routes/chatPage/ChatPage";
 import RootLayout from "./layouts/rootLayout/RootLayout";
@@ -10,6 +10,7 @@ import DashboardLayout from "./layouts/dashboardLayout/DasboardLayout";
 import SignInPage from "./routes/signInPage/signInPage";
 import SignUpPage from "./routes/signUpPage/signUpPage";
 import ChatDetailPage from "./routes/dashboardPage/ChatDetailPage";
+// import { ClerkProvider } from "@clerk/clerk-react";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <ClerkProvider publishableKey={"pk_test_bGliZXJhbC1yYWJiaXQtMTUuY2xlcmsuYWNjb3VudHMuZGV2JA"} afterSignOutUrl="/dashboard"> */}
+      <RouterProvider router={router} />
+    {/* </ClerkProvider> */}
   </React.StrictMode>
 );

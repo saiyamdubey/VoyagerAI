@@ -4,6 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useNavigate } from "react-router-dom"; // Updated import
 import "./dashboardPage.css";
+import { ClerkProvider, SignedIn, UserButton } from "@clerk/clerk-react";
 
 const googleAI = new GoogleGenerativeAI("AIzaSyCXL98QXpc0ltzWQekEN108UyUAd0eZr1g");
 
@@ -38,7 +39,7 @@ const DashboardPage = () => {
 
       // Save to backend
       try {
-        await fetch("https://voyager-backend-18hu.onrender.com/api/chats", {
+        await fetch("http://localhost:3000/api/chats", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
